@@ -24,7 +24,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      VITE_API_URL: ${{ vars.VITE_API_URL || 'https://back-clima-vjxu.onrender.com' }}
+      VITE_API_URL: https://back-clima-vjxu.onrender.com
       VITE_BASE_PATH: /Front-Clima/
       PAGES_ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
