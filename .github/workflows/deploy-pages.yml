@@ -24,9 +24,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      # Optional: set this in GitHub repo Settings > Secrets and variables > Actions > Variables.
-      # If omitted, frontend falls back to localhost and weather requests fail in production.
-      VITE_API_URL: ${{ vars.VITE_API_URL }}
+      VITE_API_URL: ${{ vars.VITE_API_URL || 'https://back-clima-vjxu.onrender.com' }}
       VITE_BASE_PATH: /Front-Clima/
       PAGES_ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
     steps:

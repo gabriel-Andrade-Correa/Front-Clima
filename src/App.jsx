@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from 'react';
 import './App.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_API_URL || 'https://back-clima-vjxu.onrender.com';
 const RAIN_DROPS = Array.from({ length: 38 }, (_, index) => ({
   id: `drop-${index}`,
   left: `${(index * 11) % 100}%`,
